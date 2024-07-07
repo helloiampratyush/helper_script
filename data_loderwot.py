@@ -6,16 +6,17 @@ import os
 num_workers=os.cpu_count()
 # print(num_workers)
 def dataloader_creator(train_dir,test_dir,batch_size:int,
-                       data_transforms):
+                       train_transforms,
+                      test_transforms):
     
     #creating test_data and train data
 
     train_data=datasets.ImageFolder(root=train_dir,
-                                    transform=data_transforms,
+                                    transform=train_transforms,
                                     target_transform=None)
     
     test_data=datasets.ImageFolder(root=test_dir,
-                                   transform=data_transforms,
+                                   transform=test_transforms,
                                    target_transform=None)
     #class_names
 
