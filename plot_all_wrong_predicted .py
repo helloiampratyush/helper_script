@@ -8,6 +8,17 @@ def plot_all_wrong_predicted(dis_prediction_tensor:list,
                              true_label_tensor:list,
                              image_list_tensor:list
                              ):
+  
+
+    """
+    doctring!
+    input : dis_pridiction_tensor : distributed predicted tensor on all test data : list
+            class_names : list of all out put classes:list
+            predicted_labe_tensor : predicted label tensor list of all test data:list
+            true_label_tensor : true label of all result of test data
+            imge_list_tensor : a list of all test images
+
+    """
     
     prediction=[]
     #store prediction in good manner
