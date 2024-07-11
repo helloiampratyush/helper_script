@@ -1,6 +1,6 @@
 from tqdm.auto import tqdm
 import torch
-import engine
+from helper_script import engine
 def updated_train(model:torch.nn.Module,
                   test_dataloader:torch.utils.data.DataLoader,
                   train_dataloader:torch.utils.data.DataLoader,
