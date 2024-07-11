@@ -22,7 +22,7 @@ def test_on_custom_img(model:torch.nn.Module,
     
     """
 
-    image_list=glob.glob(pathname=Path(img_path/"*.jpg"))
+    image_list=img_path.glob("*.jpg")
 
     for img in image_list:
 
