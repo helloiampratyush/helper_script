@@ -19,13 +19,14 @@ def single_model_curve(results:dict[str,list]):
     plt.figure(figsize=(10,7))
     plt.subplot(2,2,1)
     
-    plt.title("loss of v2")
+    plt.title("loss")
     plt.plot(x,results["train_loss"],c="r",label="train loss")
     plt.plot(x,results["test_loss"],c="b",label="test loss")
     plt.xlabel("epoches")
     plt.subplot(2,2,2)
+    plt.legend()
     
-    plt.title("accuracy of v2")
+    plt.title("accuracy")
     plt.plot(x,results["train_acc"],c="r",label="train accuracy")
     plt.plot(x,results["test_acc"],c="b",label="test accuracy")
     plt.xlabel("epoches")
@@ -57,21 +58,25 @@ def double_model_compare(model_1_results:dict[str,list],
     plt.plot(x,model_1_results["train_loss"],label=model_1_name,c="r")
     plt.plot(x,model_2_results["train_loss"],label=model_2_name,c="b")
     plt.xlabel("Epoches")
+    plt.legend()                         
 
+
+                             
     plt.subplot(2,2,2)
 
     plt.title(" Model Test Loss")
     plt.plot(x,model_1_results["test_loss"],label=model_1_name,c="r")
     plt.plot(x,model_2_results["test_loss"],label=model_2_name,c="b")
     plt.xlabel("Epoches")
-
+    plt.legend()
+                             
     plt.subplot(2,2,3)
 
     plt.title(" Model Train Accuracy")
     plt.plot(x,model_1_results["train_acc"],label=model_1_name,c="r")
     plt.plot(x,model_2_results["train_acc"],label=model_2_name,c="b")
     plt.xlabel("Epoches")
-
+    plt.legend()
     plt.subplot(2,2,4)
 
     plt.title(" Model Test Accuracy")
