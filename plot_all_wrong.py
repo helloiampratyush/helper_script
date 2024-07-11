@@ -24,7 +24,7 @@ def plot_all_wrong_predicted(dis_prediction_tensor:list,
     #store prediction in good manner
     for i in range(len(dis_prediction_tensor)):
 
-        prediction[i].append(dis_prediction_tensor[i].max().item())
+        prediction.append(dis_prediction_tensor[i].max().item())
 
     inv_normalize = transforms.Normalize(
         mean=[-0.485 / 0.229, -0.456 / 0.224, -0.406 / 0.225],
