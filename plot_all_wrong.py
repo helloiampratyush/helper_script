@@ -44,7 +44,7 @@ def plot_all_wrong_predicted(dis_prediction_tensor:list,
 
             plt.imshow(img.permute(1,2,0))
 
-            plt.title(f"predicted label: {class_names[predicted_label_tensor[i]]} | true label : {class_names[predicted_label_tensor[i]]} | prediction probability : {prediction[i]:.4f}")
+            plt.title(f"predicted label: {class_names[predicted_label_tensor[i]]} | true label : {class_names[true_label_tensor[i]]} | prediction probability : {prediction[i]:.4f}")
 
             plt.axis(False)
 
