@@ -7,7 +7,7 @@ def updated_train(model:torch.nn.Module,
                   loss_fn:torch.nn.Module,
                   optimizer:torch.optim.Optimizer,
                   epoches:int,
-                  writer:any=None,
+                  writer:torch.utils.tensorboard.writer.SummaryWriter,
                   device:torch.device="cuda"
                   ):
 
@@ -43,7 +43,7 @@ def updated_train(model:torch.nn.Module,
    results["test_acc"].append(test_acc)
 
 
-   if writer is not None:
+   if writer:
 
     writer.add_scalars(main_tag="train Loss",
                        tag_scalar_dict={
