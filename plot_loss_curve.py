@@ -23,9 +23,11 @@ def single_model_curve(results:dict[str,list]):
     plt.plot(x,results["train_loss"],c="r",label="train loss")
     plt.plot(x,results["test_loss"],c="b",label="test loss")
     plt.xlabel("epoches")
-    plt.subplot(2,2,2)
     plt.legend()
+
+
     
+    plt.subplot(2,2,2)
     plt.title("accuracy")
     plt.plot(x,results["train_acc"],c="r",label="train accuracy")
     plt.plot(x,results["test_acc"],c="b",label="test accuracy")
